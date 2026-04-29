@@ -1,6 +1,6 @@
 import './App.css'
-import {Box, Fab, Snackbar, TextField, Typography} from "@mui/material";
-import {Add, HowToReg} from '@mui/icons-material';
+import {Box, Fab, InputAdornment, Snackbar, TextField, Typography} from "@mui/material";
+import {Add, HowToReg, Search} from '@mui/icons-material';
 import NewLotteryModal from "./components/NewLotteryModal.tsx";
 import {useState} from "react";
 import LotteryList from "./components/LotteryList.tsx";
@@ -41,6 +41,15 @@ function App() {
                     label="Filter by lottery name"
                     value={lotteryNameFilter}
                     onChange={(event) => setLotteryNameFilter(event.target.value)}
+                    slotProps={{
+                        input: {
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <Search/>
+                                </InputAdornment>
+                            ),
+                        },
+                    }}
                     fullWidth
                     sx={{marginBottom: 3}}
                 />
