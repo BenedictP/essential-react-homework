@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^4.2.5",
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.0.0",
+    "@mui/material": "^9.0.0"
+  }
+}

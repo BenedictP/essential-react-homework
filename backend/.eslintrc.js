@@ -1,3 +1,32 @@
+/* eslint-env node */
+
 module.exports = {
-  extends: '@callstack/eslint-config/node',
-};
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:react-hooks/recommended',
+    // Include prettier here
+    'prettier',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
+  // Include prettier here
+  plugins: ['react-refresh', 'prettier'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    // Add a rule for prettier errors
+    'prettier/prettier': 'error',
+  },
+}
